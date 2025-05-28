@@ -4,10 +4,57 @@
     <meta charset="UTF-8">
     <title>Etapa Preanalítica</title>
 </head>
+<style>
+    .duda{
+        color: crimson;
+        font-style: italic;
+
+    }
+</style>
 <body>
 <h1>Etapa Preanalítica</h1>
-//Intro a la etapa preanalitica
+A continuación describimos la etapa preanalítica del proceso de negocio en Laboratorio
+Castillo Chidiak. Estructuramos el análisis en:
+<ul>
+    <li><div><p><em>Diagnóstico:</em> La descripción sobre el proceso de negocio actual en LLC.</p></div></li>
+    <li><div><p><em>Procesos:</em> Un acercamiento al modelado de los procesos de negocios con la información recabada hasta el momento.</p></div></li>
+    <li><div><p><em>Entidades:</em>Una descripción sobre las entidades y objetos involucradas en el proceso y una enumeración de sus datos
+    relevantes. Clasificamos estos datos en conocidos o por averiguar, para distinguir aquellos que han sido recabados de los que debemos consultar a futuro</p></div></li>
+</ul>
+<p class="duda">Con este estilo indicamos información incierta, dudas o puntos sobre los que hay que profundizar.</p>
 <h2>Diagnóstico</h2>
+<h3>Descripción General</h3>
+<p>La etapa preanalítica es la primera de las tres etapas que
+    comprenden el proceso de negocio en Laboratorio Castillo Chidiak. Esta comprendida
+por los siguientes subprocesos:
+</p>
+<ol>
+    <li>
+        <h4>Consulta del paciente.</h4>
+        <p>Refiere a la primer consulta que puede realizar el paciente por WhatsApp, teléfono o email.
+        La atención a esta consulta la realiza <strong>secretaría</strong>. En esta instancia se visualiza el
+        pedido médico, que indica las determinaciones solicitadas y se le informa al paciente el monto que debe abonar ya sea el costo o un coseguro
+        , que depende de su cobertura: si tiene una prepaga, obra social o si es un paciente particular. Luego se le indica al paciente
+        las sedes a las que puede ir para ser atendido y sus horarios de atención respectivos.</p>
+        <h5>Entradas</h5>
+        <ul>
+            <li>Pedido médico</li>
+            <li>Datos de cobertura médica del paciente</li>
+        </ul>
+        <h5>Salidas</h5>
+        <ul>
+            <li>Monto a abonar calculado</li>
+            <li class="duda">Turno agendado (si es una práctica que requiere turno.)</li>
+        </ul>
+        <p class="duda">¿Esta etapa es obligatoria o el paciente puede simplemente presentarse en una sede para ser atendido?</p>
+    </li>
+    <li>
+        <h4>Admisión y registro del paciente</h4>
+        <p>Refiere al proceso de recibir al paciente en una sede específica, registrar sus datos, validar su pedido médico y su cobertura,
+        cobrar la práctica de acuerdo a las determinaciones si fuese necesario y generar los rótulos que identificaran las muestras en la etapa de extracción.
+        Este proceso lo realiza <strong>secretaría</strong>. </p>
+    </li>
+</ol>
 //Creo que aca va toda la info que juntamos en la reunion
 // todo lo que tenga que ver con el estado actual del Laboratorio.
 //Quizas se puede separar en Descripcion General, Problematicas, Ideas Propuestas

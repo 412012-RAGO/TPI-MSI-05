@@ -46,28 +46,64 @@ por los siguientes subprocesos:
             <li>Monto a abonar calculado</li>
             <li class="duda">Turno agendado (si es una práctica que requiere turno.)</li>
         </ul>
+        <h5>Ideas a implementar</h5>
+        <ul>
+            <li>Posibilidad de precargar los datos del paciente y su pedido médico previo a presentarse en la sede.</li>
+        </ul>
+
         <p class="duda">¿Esta etapa es obligatoria o el paciente puede simplemente presentarse en una sede para ser atendido?</p>
     </li>
     <li>
         <h4>Admisión y registro del paciente</h4>
-        <p>Refiere al proceso de recibir al paciente en una sede específica, registrar sus datos, validar su pedido médico y su cobertura,
-        cobrar la práctica de acuerdo a las determinaciones si fuese necesario y generar los rótulos que identificaran las muestras en la etapa de extracción.
+        <p>Refiere al proceso de recibir al paciente en una sede específica, registrar sus datos, validar su pedido médico y su cobertura, registrar o generar la autorización del pedido de acuerdo a la obra social del paciente,
+        cobrar la práctica de acuerdo a las determinaciones si fuese necesario y generar los rótulos que identificarán las muestras en la etapa de extracción.
         Este proceso lo realiza <strong>secretaría</strong>. </p>
+        <h5>Entradas</h5>
+        <ul>
+            <li>Datos del paciente <p class="duda">Obtener lista completa de datos del paciente, obligatorios y opcionales</p></li>
+            <li>Datos de cobertura de obra social del paciente <p class="duda">Obtener qué datos de la cobertura se necesitan (OS, plan, ...)</p></li>
+            <li>Datos del pedido médico <p class="duda">Obtener datos que incluye el pedido médico (determinaciones, ...)</p></li>
+        </ul>
+        <h5>Salidas</h5>
+        <ul>
+            <li>Rótulos de identificación de las muestras impresos <p class="duda">Obtener datos completos que figuran en el rótulo</p></li>
+            <li>Sala de extracción asignada al paciente</li>
+        </ul>
+        <h5>Problemáticas</h5>
+        <ul>
+            <li>Cuello de botella a la mañana</li>
+            <li>Carga de OS repetida a la hora de validar cobertura</li>
+        </ul>
+        <h5>Soluciones propuestas</h5>
+        <ul>
+            <li>Implementacion de Totem para recepción del paciente (Véase <a href="totem">Totem</a>)</li>
+            <li>Escaneo de DNI, pedidos y autorizaciones para su carga digital.</li>
+        </ul>
+    </li>
+    <li>
+        <h4>Extracción</h4>
+        Refiere al proceso de atención del paciente por parte de técnicas/os de laboratorio y/o bioquímicos/as
+        que validan lo requerido para cada muestra y que coincidan los datos del paciente y extraen las muestras
+        correspondientes.
+        <h5>Entradas</h5>
+        <ul>
+            <li>Contenedores de muestras rotulados con la información del paciente y de las determinaciones correspondientes.</li>
+        </ul>
+        <h5>Salidas</h5>
+        <ul>
+            <li>Muestras extraidas y derivadas al área correspondiente para empezar el proceso analítico.</li>
+        </ul>
+        <h5>Problemáticas</h5>
+        <h5>Soluciones propuestas</h5>
     </li>
 </ol>
-//Creo que aca va toda la info que juntamos en la reunion
-// todo lo que tenga que ver con el estado actual del Laboratorio.
-//Quizas se puede separar en Descripcion General, Problematicas, Ideas Propuestas
-// como las cosas que se fueron mencionando al respecto.
+
 <h2>Procesos</h2>
-//Tiene que ver con el estado actual pero seria solo la descripcion
-// de cada proceso. Probablemente BPMNs.
+<h3>Etapa preanalítica</h3>
+<h3>Subprocesos</h3>
 <img src="assets/images/laboratorio.webp" alt="laboratorio">
+<img src="" alt="Subprocesos">
 <h2>Objetos</h2>
-//Esto no estoy tan seguro pero segun entiendo serian todas las
-// entidades relacionas o involucradas en el proceso.
-// Hay que ver porque un equipo ya tiene "Pacientes" por ejemplo
-// entonces hay que ver qué cosas poner aca que no se repitan.
 <h3>Entidades Humanas</h3>
 <ul>
     <li>Paciente: persona que solicita o recibe el estudio</li>
@@ -80,6 +116,7 @@ por los siguientes subprocesos:
 <h3>Entidades Administrativas/Documentales</h3>
 <ul>
     <li>Orden médica o pedido de análisis: documento presentado por el paciente</li>
+    <li>Autorización: documento emitido por la OS que valida la cobertura del análisis.</li>
 </ul>
 <hr>
 <h3>Sistemas Informáticos</h3>
